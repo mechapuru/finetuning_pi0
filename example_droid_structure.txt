@@ -1,0 +1,34 @@
+Dataset Features:
+FeaturesDict({
+    'episode_metadata': FeaturesDict({
+        'file_path': string,
+        'recording_folderpath': string,
+    }),
+    'steps': Dataset({
+        'action': Tensor(shape=(7,), dtype=float64),
+        'action_dict': FeaturesDict({
+            'cartesian_position': Tensor(shape=(6,), dtype=float64),
+            'cartesian_velocity': Tensor(shape=(6,), dtype=float64),
+            'gripper_position': Tensor(shape=(1,), dtype=float64),
+            'gripper_velocity': Tensor(shape=(1,), dtype=float64),
+            'joint_position': Tensor(shape=(7,), dtype=float64),
+            'joint_velocity': Tensor(shape=(7,), dtype=float64),
+        }),
+        'discount': Scalar(shape=(), dtype=float32),
+        'is_first': bool,
+        'is_last': bool,
+        'is_terminal': bool,
+        'language_instruction': string,
+        'language_instruction_2': string,
+        'language_instruction_3': string,
+        'observation': FeaturesDict({
+            'cartesian_position': Tensor(shape=(6,), dtype=float64),
+            'exterior_image_1_left': Image(shape=(180, 320, 3), dtype=uint8),
+            'exterior_image_2_left': Image(shape=(180, 320, 3), dtype=uint8),
+            'gripper_position': Tensor(shape=(1,), dtype=float64),
+            'joint_position': Tensor(shape=(7,), dtype=float64),
+            'wrist_image_left': Image(shape=(180, 320, 3), dtype=uint8),
+        }),
+        'reward': Scalar(shape=(), dtype=float32),
+    }),
+})
